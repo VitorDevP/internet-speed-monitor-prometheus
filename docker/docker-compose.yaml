@@ -1,0 +1,10 @@
+version: "3"
+services:
+  exporter:
+    image: internet-speed-exporter
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    ports: 
+      - ${EXPORTER_PORT}:9000
+      
